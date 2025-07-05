@@ -1090,7 +1090,7 @@ elif st.session_state.active_page == "Settings":
             phone = st.text_input("Phone")
         
         st.markdown("<h4>Export Markets</h4>", unsafe_allow_html=True)
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3, col4, col5= st.columns(4)
         with col1:
             eu_market = st.checkbox("European Union")
         with col2:
@@ -1099,6 +1099,8 @@ elif st.session_state.active_page == "Settings":
             japan_market = st.checkbox("Japan")
         with col4:
             india_market = st.checkbox("India")
+        with col5:
+            bd_market = st.checkbox("Bangladesh")
         
         st.markdown("<h4>Bangladesh-Specific Information</h4>", unsafe_allow_html=True)
         col1, col2 = st.columns(2)
@@ -1209,7 +1211,7 @@ elif st.session_state.active_page == "AI Insights":
                 ], key="reg_industry")
             with col2:
                 export_markets = st.multiselect("Export Markets", [
-                    "European Union", "United States", "Japan", "China", 
+                    "European Union", "United States", "Japan", "Bangladesh","China", 
                     "India", "Canada", "Australia", "Other"
                 ])
             
