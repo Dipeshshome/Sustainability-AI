@@ -1090,7 +1090,7 @@ elif st.session_state.active_page == "Settings":
             phone = st.text_input("Phone")
         
         st.markdown("<h4>Export Markets</h4>", unsafe_allow_html=True)
-        col1, col2, col3, col4, col5= st.columns(4)
+        col1, col2, col3, col4, col5= st.columns(5)
         with col1:
             eu_market = st.checkbox("European Union")
         with col2:
